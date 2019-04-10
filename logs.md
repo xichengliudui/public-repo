@@ -4,9 +4,8 @@ Client Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCom
 Server Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCommit:"435f92c719f279a3a67808c80521ea17d5715c66", GitTreeState:"clean", BuildDate:"2018-11-26T12:46:57Z", GoVersion:"go1.10.4", Compiler:"gc", Platform:"linux/amd64"}
 
 
-[root@node169 keepalived]# grep "couldn't propagate object cache: timed out waiting for the condition"  
+[root@node169 keepalived]# grep "couldn't propagate object cache: timed out waiting for the condition"  /var/log/messages
 
-/var/log/messages 
 Jan 24 15:34:47 node169 kubelet: E0124 15:34:47.673350   23317 configmap.go:195] Couldn't get configMap monitoring/grafana-dashboard-pods: couldn't propagate object cache: timed out waiting for the condition
 
 Jan 24 15:34:47 node169 kubelet: E0124 15:34:47.673390   23317 configmap.go:195] Couldn't get configMap monitoring/grafana-dashboard-k8s-resources-pod: couldn't propagate object cache: timed out waiting for the condition
