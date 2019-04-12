@@ -5,6 +5,7 @@ Client Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCom
 Server Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCommit:"435f92c719f279a3a67808c80521ea17d5715c66", GitTreeState:"clean", BuildDate:"2018-11-26T12:46:57Z", GoVersion:"go1.10.4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
+```shell
 [root@node169 keepalived]# grep "couldn't propagate object cache: timed out waiting for the condition"  /var/log/messages
 
 Jan 24 15:34:47 node169 kubelet: E0124 15:34:47.673350   23317 configmap.go:195] Couldn't get configMap monitoring/grafana-dashboard-pods: couldn't propagate object cache: timed out waiting for the condition
@@ -51,4 +52,5 @@ Jan 24 15:59:50 node169 kubelet: E0124 15:59:50.218726    4973 configmap.go:195]
 Jan 24 15:59:50 node169 kubelet: E0124 15:59:50.218807    4973 nestedpendingoperations.go:267] Operation for "\"kubernetes.io/configmap/857a9c92-1faa-11e9-9d7c-005056a25aec-grafana-dashboard-k8s-resources-namespace\" (\"857a9c92-1faa-11e9-9d7c-005056a25aec\")" failed. No retries permitted until 2019-01-24 15:59:50.71876942 +0800 CST m=+9.574370331 (durationBeforeRetry 500ms). Error: "MountVolume.SetUp failed for volume \"grafana-dashboard-k8s-resources-namespace\" (UniqueName: \"kubernetes.io/configmap/857a9c92-1faa-11e9-9d7c-005056a25aec-grafana-dashboard-k8s-resources-namespace\") pod \"grafana-677c45988d-dxw76\" (UID: \"857a9c92-1faa-11e9-9d7c-005056a25aec\") : couldn't propagate object cache: timed out waiting for the condition"
 
 Jan 24 15:59:50 node169 kubelet: E0124 15:59:50.218838    4973 configmap.go:195] Couldn't get configMap monitoring/grafana-dashboard-statefulset: couldn't propagate object cache: timed out waiting for the condition
+```
 
