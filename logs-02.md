@@ -1,7 +1,6 @@
 Log exception after nginx-ingress delete.
 
-kubectl delete nginx-ingress control的pod， 这个节点报了以下日志， emptydir 和secret的vlome还在
-
+`kubectl delete nginx-ingress control`, the following logs appear on this node, and vlome for emptydir and secret still exists.
 
 Jan 25 16:45:27 node169 kubelet: E0125 16:45:27.880512    1752 kubelet_volumes.go:140] Orphaned pod "5de3b1b1-1fae-11e9-ab07-005056a25aec" found, but volume paths are still present on disk : There were a total of 1 errors similar to this. Turn up verbosity to see them.
 
@@ -19,7 +18,7 @@ access.log  error.log
 901a732d7d7a        deploy.bocloud/abcsys/nginx:1.13-alpine     "nginx -g 'daemon of…"   5 hours ago         Up 5 hours                                     nginx-proxy
 
 ---
-
+**Other pods had similar problems, this time with a secret mount**:
 [root@node170 volumes]# tail -f /var/log/messages
 
 Jan 28 15:47:33 node170 kubelet: E0128 15:47:33.225022    2311 kubelet_volumes.go:140] Orphaned pod "07823c14-22cc-11e9-bb14-005056a25aec" found, but volume paths are still present on disk : There were a total of 1 errors similar to this. Turn up verbosity to see them.
