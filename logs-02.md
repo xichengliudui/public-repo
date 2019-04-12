@@ -1,3 +1,4 @@
+nginx-ingress pod removes log exception after deletion
 kubectl delete nginx-ingress control的pod， 这个节点报了以下日志， emptydir 和secret的vlome还在
 
 
