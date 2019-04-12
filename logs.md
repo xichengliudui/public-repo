@@ -1,8 +1,9 @@
+```shell
 [root@node165 ingress]# kubectl version 
 
 Client Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCommit:"435f92c719f279a3a67808c80521ea17d5715c66", GitTreeState:"clean", BuildDate:"2018-11-26T12:57:14Z", GoVersion:"go1.10.4", Compiler:"gc", Platform:"linux/amd64"}
 Server Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.3", GitCommit:"435f92c719f279a3a67808c80521ea17d5715c66", GitTreeState:"clean", BuildDate:"2018-11-26T12:46:57Z", GoVersion:"go1.10.4", Compiler:"gc", Platform:"linux/amd64"}
-
+```
 
 [root@node169 keepalived]# grep "couldn't propagate object cache: timed out waiting for the condition"  /var/log/messages
 
