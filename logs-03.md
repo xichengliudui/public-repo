@@ -45,6 +45,21 @@ monitoring  prometheus-operator-84cd85974b-khzqp  default   10.10.20.34     10.1
 monitoring  prometheus-operator-84cd85974b-rl9jx  default   10.10.20.38     10.10.20.1      24    200 
 ```
 
+*view the pod event*
+
+```
+Events:
+Type Reason Age From Message
+---- ------ ---- ---- -------
+Normal Scheduled 38m default-scheduler Successfully assigned monitoring/alertmanager-main-1 to node184.boms.com
+Normal Pulled 18m kubelet, node184.boms.com Container image "deploy.bocloud/prometheus/alertmanager:v0.15.2" already present on machine
+Normal Created 18m kubelet, node184.boms.com Created container
+Normal Started 18m kubelet, node184.boms.com Started container
+Normal Pulled 18m kubelet, node184.boms.com Container image "deploy.bocloud/coreos/configmap-reload:v0.0.1" already present on machine
+Normal Created 18m kubelet, node184.boms.com Created container
+Normal Started 18m kubelet, node184.boms.com Started container
+```
+
 *logs*
 
 ```
