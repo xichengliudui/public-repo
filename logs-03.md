@@ -15,7 +15,7 @@ prometheus-k8s-1                       3/3     Running   1          3h44m   10.1
 prometheus-operator-84cd85974b-rl9jx   1/1     Running   0          3h31m   10.10.20.38     node184.boms.com     <none>
 ```
 
-*Using fabric to view the pod under monitoring namespaces, no `alertmanager-main-1` pod was found*
+*use fabric to view the pod under the same namespace, no `alertmanager-main-1` pod was found*
 
 ```
 [root@master183 ~]# fabric-admin get pod -n monitoring
