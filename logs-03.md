@@ -1,6 +1,6 @@
 **Kubectl can get pod, fabric cannot**
 
-*Kubectl to see the pod using the fabric network (attention: `alertmanager-main-1` pod)*
+*kubectl to see the pod using the fabric network (attention: `alertmanager-main-1` pod)*
 
 ```shell
 [root@master183 ~]# kubectl get pod -n monitoring -o wide |grep 10.10.
