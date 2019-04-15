@@ -1,5 +1,18 @@
 **Kubectl can get pod, fabric cannot**
 
+*version info*
+
+```
+fabric version: fabric-node-0.0.6rc16
+
+[root@master83 ~]# kubectl version 
+Client Version: version.Info
+
+{Major:"1", Minor:"12", GitVersion:"v1.12.6", GitCommit:"ab91afd7062d4240e95e51ac00a18bd58fddd365", GitTreeState:"clean", BuildDate:"2019-02-26T12:59:46Z", GoVersion:"go1.10.8", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info
+
+{Major:"1", Minor:"12", GitVersion:"v1.12.6", GitCommit:"ab91afd7062d4240e95e51ac00a18bd58fddd365", GitTreeState:"clean", BuildDate:"2019-02-26T12:49:28Z", GoVersion:"go1.10.8", Compiler:"gc", Platform:"linux/amd64"}
+```
 
 *view pods that use fabric network(attention: `alertmanager-main-1` pod)*
 
@@ -32,20 +45,9 @@ monitoring  prometheus-operator-84cd85974b-khzqp  default   10.10.20.34     10.1
 monitoring  prometheus-operator-84cd85974b-rl9jx  default   10.10.20.38     10.10.20.1      24    200 
 ```
 
-```
-fabric version: fabric-node-0.0.6rc16
-
-[root@master83 ~]# kubectl version 
-Client Version: version.Info
-
-{Major:"1", Minor:"12", GitVersion:"v1.12.6", GitCommit:"ab91afd7062d4240e95e51ac00a18bd58fddd365", GitTreeState:"clean", BuildDate:"2019-02-26T12:59:46Z", GoVersion:"go1.10.8", Compiler:"gc", Platform:"linux/amd64"}
-Server Version: version.Info
-
-{Major:"1", Minor:"12", GitVersion:"v1.12.6", GitCommit:"ab91afd7062d4240e95e51ac00a18bd58fddd365", GitTreeState:"clean", BuildDate:"2019-02-26T12:49:28Z", GoVersion:"go1.10.8", Compiler:"gc", Platform:"linux/amd64"}
-```
+*logs*
 
 ```
-
 time="2019-02-26T17:06:44+08:00" level=info msg="cmdAdd: get pod namespace kube-system, podName kube-dns-8554cdf7dc-xwc4w"
 time="2019-02-26T17:07:16+08:00" level=error msg="ns kube-system pod kube-dns-8554cdf7dc-xwc4w cmdadd error in IPAM Post http://localhost:9013/ips/get/: EOF"
 time="2019-02-26T17:07:16+08:00" level=info msg="cmdDel: get pod namespace kube-system, podName kube-dns-8554cdf7dc-xwc4w "
