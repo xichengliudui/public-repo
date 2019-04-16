@@ -45,7 +45,7 @@ monitoring  prometheus-operator-84cd85974b-khzqp  default   10.10.20.34     10.1
 monitoring  prometheus-operator-84cd85974b-rl9jx  default   10.10.20.38     10.10.20.1      24    200 
 ```
 
-*view the pod event*
+##### view the pod event
 
 ```
 Events:
